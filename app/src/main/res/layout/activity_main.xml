@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="30dp"
+        android:text="Количество дней на больничном:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/daysSlider"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="30dp"
+        android:max="365"
+        android:progress="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avarqageInput" />
+
+    <EditText
+        android:id="@+id/days"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="294dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Размер выплаты:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Средний заработок в день:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/avarqageInput"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <SeekBar
+        android:id="@+id/inputSlider"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:max="1000"
+        android:progress="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avarqageInput" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="0dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="reselect"
+        android:text="Стаж более 10 лет?"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daysSlider" />
+</androidx.constraintlayout.widget.ConstraintLayout>
